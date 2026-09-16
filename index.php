@@ -1,0 +1,81 @@
+<?php 
+// Importando a classe Filme
+require_once "src/Filme.php";
+
+// Criando objeto/instância a partir da classe Filme
+$filme1 = new Filme();
+
+// Atribuindo valores às propriedades do objeto
+$filme1->titulo = "De Volta para o Futuro";
+$filme1->genero = "Ficção Científica";
+$filme1->ano = 1985;
+
+$filme2 = new Filme();
+$filme2->titulo = "Toy Story";
+$filme2->genero = "Animação";
+$filme2->ano = 1995;
+
+$filme3 = new Filme();
+$filme3->titulo = "O Auto da Compadecida";
+$filme3->genero = "Comédia";
+$filme3->ano = 2000;
+
+/* var_dump($filme1);
+echo "<br><br>";
+var_dump($filme2);
+echo "<br><br>";
+var_dump($filme3); */
+
+// Criando uma lista de objetos (filmes)
+$filmes = [$filme1, $filme2, $filme3];
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Coleção de Filmes</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p class="destaque">Uma sessão de boas histórias</p>
+            <h1>Minha coleção de filmes</h1>
+            <p>Três filmes para descobrir, rever e se divertir</p>
+        </header>
+
+        <div class="filmes">
+        <?php foreach($filmes as $filme): ?>
+            <article class="card-filme">
+                <span class="genero">
+                    <?= $filme->genero ?>
+                </span>
+
+                <h2> <?= $filme->titulo ?> </h2>
+
+                <p class="ano">Lançamento: <?= $filme->ano ?></p>
+
+                <?php if($filme->ehClassico()): ?>
+                    <span class="classico">Clássico</span>
+                <?php endif; ?>
+            </article>
+        <?php endforeach; ?>
+        </div>
+
+        <hr>
+
+        <div class="assuntos-estudados">
+            <h2>Assuntos estudados</h2>
+            <ul>
+                <li>Classes e objetos</li>
+                <li>Propriedades e métodos</li>
+                <li>Tipos de dados</li>
+                <li>Estrutura de repetição</li>
+                <li>Estrutura condicionais</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
