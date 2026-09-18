@@ -6,6 +6,17 @@ Navegue pelo menu `branches` para acessar o material desejado.
 
 ---
 
+## Branch 02_visibilidade-e-encapsulamento
+
+Assuntos estudados:
+
+- Visibilidade: public, private e protected
+- Encapsulamento
+- Getters e Setters
+- Validação no setter do ano
+
+---
+
 ## Branch 01_classes-objetos-propriedades-metodos
 
 Assuntos estudados:
