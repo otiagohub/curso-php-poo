@@ -1,32 +1,23 @@
 <?php 
-// Importando a classe Filme
 require_once "src/Filme.php";
 
-// Criando objeto/instância a partir da classe Filme
 $filme1 = new Filme();
 
-// Atribuindo valores às propriedades do objeto
-$filme1->titulo = "De Volta para o Futuro";
-$filme1->genero = "Ficção Científica";
-$filme1->ano = 1985;
+$filme1->setTitulo("De Volta para o Futuro");
+$filme1->setGenero("Ficção Científica");
+$filme1->setAno(1985);
 
 $filme2 = new Filme();
-$filme2->titulo = "Toy Story";
-$filme2->genero = "Animação";
-$filme2->ano = 1995;
+$filme2->setTitulo("Toy Story");
+$filme2->setGenero("Animação");
+$filme2->setAno(1995);
 
 $filme3 = new Filme();
-$filme3->titulo = "O Auto da Compadecida";
-$filme3->genero = "Comédia";
-$filme3->ano = 2000;
+$filme3->setTitulo("O Auto da Compadecida");
+$filme3->setGenero("Comédia");
+$filme3->setAno(2000);
+$filme3->setAno(-100);
 
-/* var_dump($filme1);
-echo "<br><br>";
-var_dump($filme2);
-echo "<br><br>";
-var_dump($filme3); */
-
-// Criando uma lista de objetos (filmes)
 $filmes = [$filme1, $filme2, $filme3];
 ?>
 <!DOCTYPE html>
@@ -49,12 +40,12 @@ $filmes = [$filme1, $filme2, $filme3];
         <?php foreach($filmes as $filme): ?>
             <article class="card-filme">
                 <span class="genero">
-                    <?= $filme->genero ?>
+                    <?= $filme->getGenero() ?>
                 </span>
 
-                <h2> <?= $filme->titulo ?> </h2>
+                <h2> <?= $filme->getTitulo() ?> </h2>
 
-                <p class="ano">Lançamento: <?= $filme->ano ?></p>
+                <p class="ano">Lançamento: <?= $filme->getAno() ?></p>
 
                 <?php if($filme->ehClassico()): ?>
                     <span class="classico">Clássico</span>
@@ -68,11 +59,10 @@ $filmes = [$filme1, $filme2, $filme3];
         <div class="assuntos-estudados">
             <h2>Assuntos estudados</h2>
             <ul>
-                <li>Classes e objetos</li>
-                <li>Propriedades e métodos</li>
-                <li>Tipos de dados</li>
-                <li>Estrutura de repetição</li>
-                <li>Estrutura condicionais</li>
+                <li>Visibilidade: public, private e protected</li>
+                <li>Encapsulamento</li>
+                <li>Getters e Setters</li>
+                <li>Validação no setter do ano</li>
             </ul>
         </div>
 
