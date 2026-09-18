@@ -1,24 +1,15 @@
 <?php 
 require_once "src/Filme.php";
 
-$filme1 = new Filme();
+$filme1 = new Filme("De Volta para o Futuro", "Ficção Científica", 1985);
+$filme2 = new Filme("Toy Story", "Animação", 1995);
+$filme3 = new Filme("O Auto da Compadecida", "Comédia", 2000);
+$filme4 = new Filme("Homem Aranha: Um novo dia", "Ação", 2027);
 
-$filme1->setTitulo("De Volta para o Futuro");
-$filme1->setGenero("Ficção Científica");
-$filme1->setAno(1985);
+$filmes = [$filme1, $filme2, $filme3, $filme4];
 
-$filme2 = new Filme();
-$filme2->setTitulo("Toy Story");
-$filme2->setGenero("Animação");
-$filme2->setAno(1995);
-
-$filme3 = new Filme();
-$filme3->setTitulo("O Auto da Compadecida");
-$filme3->setGenero("Comédia");
-$filme3->setAno(2000);
-$filme3->setAno(-100);
-
-$filmes = [$filme1, $filme2, $filme3];
+// Usando o setter para alterar dados (se necessário)
+$filme1->setAno(1986);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -59,10 +50,11 @@ $filmes = [$filme1, $filme2, $filme3];
         <div class="assuntos-estudados">
             <h2>Assuntos estudados</h2>
             <ul>
-                <li>Visibilidade: public, private e protected</li>
-                <li>Encapsulamento</li>
-                <li>Getters e Setters</li>
-                <li>Validação no setter do ano</li>
+                <li>Finalidade do construtor (usando o método __construct)</li>
+                <li>Parâmetros/argumentos no construtor</li>
+                <li>Passagem de dados/valores ao instanciar um objeto usando operador new</li>
+                <li>Construtor para dados iniciais e setters para alterações posteriores</li>
+                <li>Parâmetro opcional (com valor padrão)</li>
             </ul>
         </div>
 
