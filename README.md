@@ -6,6 +6,18 @@ Navegue pelo menu `branches` para acessar o material desejado.
 
 ---
 
+## Branch 03_construtor
+
+Assuntos estudados:
+
+- Finalidade do construtor (usando o método __construct)
+- Parâmetros/argumentos no construtor
+- Passagem de dados/valores ao instanciar um objeto usando operador new
+- Construtor para dados iniciais e setters para alterações posteriores
+- Parâmetro opcional (com valor padrão)
+- 
+---
+
 ## Branch 02_visibilidade-e-encapsulamento
 
 Assuntos estudados:
