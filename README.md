@@ -6,6 +6,20 @@ Navegue pelo menu `branches` para acessar o material desejado.
 
 ---
 
+## Branch 04_heranca
+
+Assuntos estudados:
+
+- Classe-pai (superclasse): Conteudo
+- Classe-filha (subclasse): Filme e Serie
+- Herança utilizando extends
+- Herança com propriedades e métodos
+- Visibilidade protected nas classes pai e acessando pela filha
+- Construtor da classe pai usando parent::__construct()
+- Propriedades e métodos específicos nas classes filhas
+
+---
+
 ## Branch 03_construtor
 
 Assuntos estudados:
@@ -15,7 +29,7 @@ Assuntos estudados:
 - Passagem de dados/valores ao instanciar um objeto usando operador new
 - Construtor para dados iniciais e setters para alterações posteriores
 - Parâmetro opcional (com valor padrão)
-- 
+  
 ---
 
 ## Branch 02_visibilidade-e-encapsulamento
