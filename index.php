@@ -1,30 +1,36 @@
 <?php 
+// Importando a superclasse (classe-pai)
+require_once "src/Conteudo.php";
+
+// Importando as subclasses (classes-filha)
 require_once "src/Filme.php";
+require_once "src/Serie.php";
 
-$filme1 = new Filme("De Volta para o Futuro", "Ficção Científica", 1985);
-$filme2 = new Filme("Toy Story", "Animação", 1995);
-$filme3 = new Filme("O Auto da Compadecida", "Comédia", 2000);
-$filme4 = new Filme("Homem Aranha: Um novo dia", "Ação", 2027);
+$filme1 = new Filme("De Volta para o Futuro", "Ficção Científica", 1985, 116);
+$filme2 = new Filme("Toy Story", "Animação", 1995, 169);
 
-$filmes = [$filme1, $filme2, $filme3, $filme4];
+$serie1 = new Serie("Friends", "Comédia", 1994, 10);
+$serie2 = new Serie("Supernatural", "Fantasia", 2005, 15);
 
-// Usando o setter para alterar dados (se necessário)
-$filme1->setAno(1986);
+$filmes = [$filme1, $filme2];
+$series = [$serie1, $serie2];
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Coleção de Filmes</title>
+    <title>Minha Coleção de Filmes e Séries</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <div class="container">
         <header>
             <p class="destaque">Uma sessão de boas histórias</p>
-            <h1>Minha coleção de filmes</h1>
-            <p>Três filmes para descobrir, rever e se divertir</p>
+            <h1>Minha coleção de filmes e séries</h1>
+            <p>Filmes e séries para descobrir, rever e se divertir.</p>
         </header>
 
         <div class="filmes">
@@ -38,6 +44,8 @@ $filme1->setAno(1986);
 
                 <p class="ano">Lançamento: <?= $filme->getAno() ?></p>
 
+                <p> <?= $filme->getDescricao() ?> </p>
+
                 <?php if($filme->ehClassico()): ?>
                     <span class="classico">Clássico</span>
                 <?php endif; ?>
@@ -47,14 +55,34 @@ $filme1->setAno(1986);
 
         <hr>
 
+        <div class="series">
+            <?php foreach($series as $serie):?>
+                <article class="card-serie">
+                    <span class="genero">
+                        <?= $serie->getGenero() ?>
+                    </span>
+                    <h2><?= $serie->getTitulo() ?></h2>
+                    <p class="ano">Lançamento: <?= $serie->getAno() ?></p>
+
+                    <p> <?= $serie->getDescricao() ?> </p>
+
+                    <?php if($serie->ehClassico()): ?>
+                        <span class="classico">Clássico</span>
+                    <?php endif; ?>
+                </article>
+            <?php endforeach;?>
+        </div>
+
         <div class="assuntos-estudados">
             <h2>Assuntos estudados</h2>
             <ul>
-                <li>Finalidade do construtor (usando o método __construct)</li>
-                <li>Parâmetros/argumentos no construtor</li>
-                <li>Passagem de dados/valores ao instanciar um objeto usando operador new</li>
-                <li>Construtor para dados iniciais e setters para alterações posteriores</li>
-                <li>Parâmetro opcional (com valor padrão)</li>
+                <li>Classe-pai (superclasse): <b>Conteudo</b></li>
+                <li>Classe-filha (subclasse): <b>Filme e Serie</b></li>
+                <li>Herança utilizando <b>extends</b></li>
+                <li>Herança com propriedades e métodos</li>
+                <li>Visibilidade <b>protected</b> nas classes pai e acessando pela filha</li>
+                <li>Construtor da classe pai usando <b>parent::__construct()</b></li>
+                <li>Propriedades e métodos específicos nas classes filhas</li>
             </ul>
         </div>
 

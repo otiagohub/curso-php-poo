@@ -1,64 +1,36 @@
 <?php
 
-class Filme
+// Classe Filme é uma classe-filha (subclasse)
+class Filme extends Conteudo
 {
-    private string $titulo;
-    private string $genero;
-    private int $ano;
+    private int $duracao;
 
-    /* Método construtor */
     public function __construct(
         string $valorTitulo,
         string $valorGenero,
-        int $valorAno = 2026
+        int $valorAno,
+        int $valorDuracao
     ) {
-        // Atribuindo os valores recebidos nos parâmetros
-        // do construtor para cada propriedade da classe
-        $this->titulo = $valorTitulo;
-        $this->genero = $valorGenero;
-        // $this->ano = $valorAno;
-
-        // Atribuindo os valores ATRAVÉS do setter
-        $this->setAno($valorAno);
+        // Chamando o construtor da classe-pai (Conteudo) e repassando os valores
+        parent::__construct($valorTitulo, $valorGenero, $valorAno);
+        
+        // Atribuição de $valorDuracao à propriedade $duracao
+        $this->duracao = $valorDuracao;
     }
 
-    /* Métodos Getters */
-    public function getTitulo(): string
+    public function getDuracao(): int
     {
-        return $this->titulo;
+        return $this->duracao;
     }
 
-    public function getGenero(): string
+    public function setDuracao(int $valorDuracao): void 
     {
-        return $this->genero;
+        if($valorDuracao > 0) $this->duracao = $valorDuracao;
     }
 
-    public function getAno(): int
+    public function getDescricao(): string 
     {
-        return $this->ano;
-    }
-
-    /* Métodos Setters */
-    public function setTitulo(string $valorTitulo): void
-    {
-        $this->titulo = $valorTitulo;
-    }
-
-    public function setAno(int $valorAno): void
-    {
-        if ($valorAno > 0) {
-            $this->ano = $valorAno;
-        }
-    }
-
-    public function setGenero(string $valorGenero): void
-    {
-        $this->genero = $valorGenero;
-    }
-
-
-    public function ehClassico(): bool
-    {
-        return $this->ano < 2000;
+        // De Volta para o Futuro é um filme com 116 minutos de duração.
+        return "$this->titulo é um filme com $this->duracao minutos de duração";
     }
 }
