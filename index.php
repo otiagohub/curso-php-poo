@@ -22,7 +22,7 @@ $series = [$serie1, $serie2];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Coleção de Filmes e Séries</title>
+    <title>Minha Coleção de Filmes e Séries - Herança</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
