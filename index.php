@@ -18,7 +18,7 @@ $mensagem = "Seu pedido foi confirmado!";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notificações da loja virtual</title>
+    <title>Notificações da loja virtual - Interfaces</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 
