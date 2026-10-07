@@ -22,7 +22,7 @@ mais pois não é possível criar objetos diretamente à partir de classes abstr
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Coleção de Filmes e Séries</title>
+    <title>Minha Coleção de Filmes e Séries - Classes Abstratas e Polimorfismo</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
