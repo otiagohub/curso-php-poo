@@ -25,7 +25,7 @@ $filmes = [$filme1, $filme2, $filme3];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Coleção de Filmes</title>
+    <title>Minha Coleção de Filmes - Visibilidade e Encapsulamento</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
