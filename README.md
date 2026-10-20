@@ -1,4 +1,4 @@
-# Exercício 01: Sistema de Funcionários
+# Exercício 01: Sistema de Funcionários (SOLUCIONADO)
 
 *Nesta atividade você irá praticar o desenvolvimento de classes, propriedades, métodos, encapsulamento, herança e polimorfismo.*
 
