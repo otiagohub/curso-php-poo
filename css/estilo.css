@@ -1,0 +1,140 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #F8F1E8;
+    color: #40352E;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    margin-bottom: 36px;
+}
+
+header p {
+    margin: 0;
+}
+
+header .destaque {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #EED8C8;
+    color: #8F4026;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 8px 0 12px;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+h2 {
+    margin: 28px 0 14px;
+    font-size: 1.4rem;
+}
+
+.lista-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card {
+    min-width: 0;
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid #E8D9CC;
+    border-top: 4px solid #B95732;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px #40352E0A;
+}
+
+.card h3 {
+    margin: 0 0 12px;
+    color: #9F482B;
+    overflow-wrap: anywhere;
+}
+
+.card p {
+    margin: 8px 0 0;
+    overflow-wrap: anywhere;
+}
+
+.status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.status-disponivel {
+    background: #D9F2E3;
+    color: #17663A;
+}
+
+.status-indisponivel {
+    background: #FBE2E2;
+    color: #A12626;
+}
+
+.mensagem {
+    margin-top: 28px;
+    padding: 24px;
+    background: #FBEAEA;
+    color: #842029;
+    border: 1px solid #EFCACA;
+    border-left: 5px solid #C0392B;
+    border-radius: 12px;
+}
+
+.mensagem h2 {
+    margin: 0 0 8px;
+    color: #A12626;
+}
+
+.mensagem p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.assuntos-estudados {
+    margin-top: 28px;
+    padding: 12px;
+    color: #6D5B4E;
+}
+
+.assuntos-estudados h2 {
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 801px) {
+    .container {
+        padding: 64px 24px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .lista-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 calc(33.333% - 18px);
+    }
+}
