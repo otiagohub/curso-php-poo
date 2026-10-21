@@ -1,4 +1,4 @@
-# Exercício 02: Locadora de Equipamentos
+# Exercício 02: Locadora de Equipamentos (SOLUCIONADO)
 
 *Nesta atividade você irá integrar conceitos de orientação a objetos, enumerações, namespaces, autoload com Composer e tratamento de exceções.*
 
